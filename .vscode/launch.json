@@ -4,6 +4,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "WordleApplication",
+      "request": "launch",
+      "mainClass": "de.dhbw.stuttgart.wordle.WordleApplication",
+      "projectName": "test2"
+    },
+    {
+      "type": "java",
       "name": "Test2Application",
       "request": "launch",
       "mainClass": "de.dhbw.stuttgart.test2.Test2Application",
