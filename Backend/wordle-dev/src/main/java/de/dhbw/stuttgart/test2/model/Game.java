@@ -49,10 +49,11 @@ public class Game
 	@Column(name = "guessWord")
 	private String guessWord;
 	
-//	@Column(name = "invitationAccepted")
-//	private boolean invitationAccepted;
+	@Column(name = "username1")
+	private String username1;
 	
-
+	@Column(name = "username2")
+	private String username2;
 	
 
 	@Enumerated(EnumType.STRING)
@@ -148,6 +149,22 @@ public class Game
 
 	public void setGuessWord(String guessWord) {
 		this.guessWord = guessWord;
+	}
+
+	public String getUsername1() {
+		return username1;
+	}
+
+	public void setUsername1(String username1) {
+		this.username1 = username1;
+	}
+
+	public String getUsername2() {
+		return username2;
+	}
+
+	public void setUsername2(String username2) {
+		this.username2 = username2;
 	}
 	
 	

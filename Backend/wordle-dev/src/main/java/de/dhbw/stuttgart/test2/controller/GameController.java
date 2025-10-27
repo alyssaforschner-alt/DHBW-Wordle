@@ -33,20 +33,6 @@ public class GameController
 		this.wordService = wordService;
 	}
 	
-	
-//	@PostMapping("/start")
-//	public Game startGame(@RequestParam Long userID, @RequestParam boolean multiplayer)
-//	{
-//		Game game;
-//		
-//		if(!multiplayer)
-//		{
-//			game = gameService.startSingleGame(userID);
-//		}
-//		else game = gameService.startMultiGame(userID);
-//		return game;
-//	}
-	
 	@PostMapping("/start/singlegame")
 	public Game startGame(@RequestParam Long userID)
 	{
@@ -75,23 +61,13 @@ public class GameController
 		Game game;
 		
 		game = gameService.check(gameID);
-		return game;
-		
-	
-		
-//		if(game.getGameID() == 0l) return game; 
-//		
-//		if(game.getStatus() == Status.INVITED && game.getUser2ID() == 0l) return game; //user1
-//		
-//		if()//user2
-//			return gameService.startMultiGame(userID);		
+		return game;	
 	}
 	
 	@PostMapping("/accept")
 	public Game accept(@RequestParam String answer, @RequestParam Long gameID) 
 	{
 		Game game;
-		//if(answer.equalsIgnoreCase("decline")) game = gameService.decline(gameID);
 		game = gameService.accept(gameID, answer);
 		return game; 
 	} 
@@ -125,10 +101,4 @@ public class GameController
     public int importWords(@RequestBody List<String> words) {
         return wordService.importWords(words);
     }
-	
-	//add logic who is winner who is loser? in param userid?
-	//add max guess = 6
-	//polling? is it check?
-
-//	@PutMapping("/end/{id}")
 }

@@ -28,11 +28,10 @@ public class GameService
     // Spring automatically injects both beans
     public GameService(GameRepository gameRepository, RandomWordService randomWordService, UserRepository userRepository, WordRepository wordRepository) {
         this.gameRepository = gameRepository;
-        //this.wordService = wordService;
 		this.randomWordService = randomWordService;
         this.userRepository = userRepository;
         this.wordRepository = wordRepository;
-		//this.randomWordRepository = randomWordRepository;
+		
     }
 
 	//start the game
@@ -46,30 +45,25 @@ public class GameService
 	}
 
 	
-//	public Long invitation(String username)
-//	{
-//		User user = userRepository.findByUsername(username);
-//		if(user != null) return user.getUserID();
-//		return 0l;
-//	}
-	
 	public Game invite(Long user1ID, String username2)
 	{
 		Game game = new Game();
 		
 		User user = userRepository.findByUsername(username2);
+		User user1 = userRepository.findByUserID(user1ID);
 		if(user != null) 
 		{
 			game.setUser2ID(user.getUserID());
 			game.setUser1ID(user1ID);
 			game.setStatus(Status.INVITED);
+			game.setUsername1(user1.getUsername());
 			gameRepository.save(game);
 			return game;
 		}
 		game.setUser1ID(user1ID);
 		game.setStatus(Status.NOT_FOUND);
 		return game;
-		//if after invitation game comes with user2ID = 0 -> user not found - realization in frontend
+		
 	}
 
 	public Game check(Long gameID) 
@@ -87,7 +81,7 @@ public class GameService
 	
 	public Game startMultiGame(Game game)
 	{
-		//game.setWord("apple");
+		
 		game.setWord(randomWordService.randomWordValue());
 		game.setStatus(Status.GAME_ON);
 		return game;
@@ -109,15 +103,6 @@ public class GameService
 	    return gameRepository.save(game);  // persist changes
 	}
 	
-//	public Game decline(Long gameID)
-//	{
-//    Game game = gameRepository.findById(gameID)
-//            .orElseThrow(() -> new IllegalArgumentException("Game not found"));
-//
-//        game.setStatus(Status.DECLINED);
-//        return gameRepository.save(game);
-//	}
-
 	public Game checkGuess(String guess, Long gameID, Long userID) 
 	{
 		String who;
@@ -199,29 +184,9 @@ public class GameService
 		       game.setWinnerUserID(game.getUser1ID());
 		    }
 		}
-	    
-
 
 	    return gameRepository.save(game);
 		
 	}
-	
-
-	
-//	public Game accept(Long gameID) 
-//	{
-//		Game game = gameRepository.findByGameID(gameID);
-//		game.setWord(wordService.randomWord().getValue());
-//		game.setStatus(Status.ACCEPTED);
-//		return game;
-//	}
-
-//	public Game decline(Long gameID) 
-//	{
-//		Game game = gameRepository.findByGameID(gameID);
-//		game.setStatus(Status.DECLINED);
-//		gameRepository.deleteById(gameID);
-//		return null;
-//	}
 	
 }

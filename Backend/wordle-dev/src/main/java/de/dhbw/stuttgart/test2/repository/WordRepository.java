@@ -10,7 +10,7 @@ import de.dhbw.stuttgart.test2.model.Word;
 public interface WordRepository extends JpaRepository<Word, Long>{
 
 	List<Word> findAll();
-	//Word findByValue(String value);
+	
 	Optional<Word> findByValue(String value);
 
 }

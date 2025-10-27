@@ -23,13 +23,7 @@ public class UserController
     public UserController(UserService userService) {
         this.userService = userService;
     }
-	
-//	@PostMapping("/register")
-//	public ResponseEntity<?> register(@RequestBody User user)
-//	{
-//		userService.register(user);
-//		return ResponseEntity.ok(game);
-//	}
+    
 	@PostMapping("/login")
 	public User login(@RequestBody Login login)
 	{
@@ -39,21 +33,9 @@ public class UserController
 		if(user == null) 
 		{
 			user = userService.register(login);
-			//TODO connect with db
 			
 		}
 		return user;
 	}
 	
-//	@PostMapping("/invite")
-//	public ResponseEntity<String> invite(@PathVariable Long userID, @RequestParam String username)
-//	{
-//		return ResponseEntity.ok("Invitation sent");
-//	}
-//	
-//	@PostMapping("/accept")
-//	public ResponseEntity<String> accept(@PathVariable Long userID)
-//	{
-//		return ResponseEntity.ok("Invitation accepted");
-//	}
 }
