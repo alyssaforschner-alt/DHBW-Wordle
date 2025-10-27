@@ -7,6 +7,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Component;
 import de.dhbw.stuttgart.test2.service.RandomWordService;
 
 @Component
+@Order(Ordered.HIGHEST_PRECEDENCE)
 public class RandomWordCsvLoader implements CommandLineRunner {
 
     private final RandomWordService wordService;
