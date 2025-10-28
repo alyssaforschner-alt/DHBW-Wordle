@@ -4,7 +4,7 @@ Um Wordle zu starten, müssen folgende Schritte durchgeführt werden:
 
 ## Backend starten (Spring Boot):
 
-Option 1 – über das Terminal in Visual Studio Code:
+**Option 1 – über das Terminal in Visual Studio Code:**
 
     cd Backend
     cd wordle-dev
@@ -12,7 +12,7 @@ Option 1 – über das Terminal in Visual Studio Code:
     .\mvnw.cmd spring-boot:run
 
 
-Option 2 – direkt über VSC:
+**Option 2 – direkt über VSC:**
 
 - Visual Studio Code öffnen
 - Im Explorer navigieren zu:<br> 
@@ -23,14 +23,14 @@ Option 2 – direkt über VSC:
 
 ## Frontend starten (Angular):
 
-Option 1 – im normalen Terminal / CMD (falls Administratorrechte notwendig):
+**Option 1 – im normalen Terminal / CMD (falls Administratorrechte notwendig):**
 
     cd <Pfad zum Projekt>
     npm install
     ng serve --host <Ihre IP> --port 4200 (am besten im privaten Netzwerk)
 
 
-Option 2 – direkt im Terminal von Visual Studio Code:
+**Option 2 – direkt im Terminal von Visual Studio Code:**
 
     cd <Pfad zum Projekt>
     npm install
