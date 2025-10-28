@@ -36,7 +36,6 @@ ng serve --host <Ihre IP> --port 4200 # (am besten im privaten Netzwerk)
 **Option 2 – direkt im Terminal von Visual Studio Code:**
 
 ```bash
-cd <Pfad zum Projekt>
 npm install
 ng serve --host <Ihre IP> --port 4200 # (am besten im privaten Netzwerk)
 ```
