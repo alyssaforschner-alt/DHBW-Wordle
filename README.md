@@ -1,59 +1,44 @@
-# Worlde2
+# Anleitung zum Starten von Wordle
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
+Um Wordle zu starten, müssen folgende Schritte durchgeführt werden:
 
-## Development server
+## Backend starten (Spring Boot):
 
-To start a local development server, run:
+    Option 1 – über das Terminal in Visual Studio Code:
 
-```bash
-ng serve
-```
+        ```bash
+        cd Backend
+        cd wordle-dev
+        .\mvnw.cmd clean package
+        .\mvnw.cmd spring-boot:run
+        ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+    Option 2 – direkt über VSC:
 
-## Code scaffolding
+        • Visual Studio Code öffnen
+        • Im Explorer navigieren zu:
+            Backend → wordle-dev → src → main → java/de/dhbw/stuttgart/wordle
+        • Datei: WordleApplication.java
+        • Rechtsklick → Run Java
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-```bash
-ng generate component component-name
-```
+## Frontend starten (Angular):
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+    Option 1 – im normalen Terminal / CMD (falls Administratorrechte notwendig):
 
-```bash
-ng generate --help
-```
+        ```bash
+        cd <Pfad zum Projekt>
+        npm install
+        ng serve --host <Ihre IP> --port 4200 (am besten im privaten Netzwerk)
+        ```
 
-## Building
+    Option 2 – direkt im Terminal von Visual Studio Code:
 
-To build the project run:
+        ```bash
+        cd <Pfad zum Projekt>
+        npm install
+        ng serve --host <Ihre IP> --port 4200 (am besten im privaten Netzwerk)
+        ```
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Spieler 2 startet in Browser mit: `http://<Ihre IP>:4200/` (muss im selben Netzwerk wie Host sein).
