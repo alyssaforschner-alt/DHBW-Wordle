@@ -1,4 +1,4 @@
-import { Component, OnDestroy, signal } from '@angular/core';
+﻿import { Component, OnDestroy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterOutlet, NavigationEnd } from '@angular/router';
 import { GameService } from './services/game.service';
@@ -257,7 +257,7 @@ export class App implements OnDestroy {
           } catch { /* ignore malformed state */ }
           // Always keep ID and name in sync
           this.pendingInviteGameID = g.gameID;
-          const fromName = (g as any).user1Name ?? `User ${g.user1ID}`;
+          const fromName = (g as any).username1 ?? `User ${g.user1ID}`;
           this.pendingInviteFrom.set(fromName);
           // Only open modal if not already visible
           if (!this.showAccept()) this.showAccept.set(true);
@@ -278,7 +278,7 @@ export class App implements OnDestroy {
         if (!g || !g.gameID || g.status !== 'INVITED') { this.showAccept.set(false); return; }
         id = g.gameID;
         this.pendingInviteGameID = id;
-        const fromName = (g as any).user1Name ?? `User ${g.user1ID}`;
+        const fromName = (g as any).username1 ?? `User ${g.user1ID}`;
         this.pendingInviteFrom.set(fromName);
       } catch {
         this.showAccept.set(false); return;
@@ -319,7 +319,7 @@ export class App implements OnDestroy {
         if (!g || !g.gameID || g.status !== 'INVITED') { this.showAccept.set(false); return; }
         id = g.gameID;
         this.pendingInviteGameID = id;
-        const fromName = (g as any).user1Name ?? `User ${g.user1ID}`;
+        const fromName = (g as any).username1 ?? `User ${g.user1ID}`;
         this.pendingInviteFrom.set(fromName);
       } catch {
         this.showAccept.set(false); return;

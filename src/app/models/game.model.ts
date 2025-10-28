@@ -1,4 +1,4 @@
-export type GameStatus =
+﻿export type GameStatus =
   | 'UNKNOWN'
   | 'NOT_FOUND'
   | 'INVITED'
@@ -12,8 +12,8 @@ export interface Game {
   gameID: number;
   user1ID: number;
   user2ID: number;
-  user1Name?: string | null;
-  user2Name?: string | null;
+  username1?: string | null;
+  username2?: string | null;
   guessesUser1?: string | null;
   guessesUser2?: string | null;
   guessCount1: number;
