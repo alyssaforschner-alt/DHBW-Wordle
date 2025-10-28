@@ -6,10 +6,12 @@ Um Wordle zu starten, müssen folgende Schritte durchgeführt werden:
 
 **Option 1 – über das Terminal in Visual Studio Code:**
 
-    cd Backend
-    cd wordle-dev
-    .\mvnw.cmd clean package
-    .\mvnw.cmd spring-boot:run
+```bash
+cd Backend
+cd wordle-dev
+.\mvnw.cmd clean package
+.\mvnw.cmd spring-boot:run
+```
 
 
 **Option 2 – direkt über VSC:**
@@ -25,16 +27,19 @@ Um Wordle zu starten, müssen folgende Schritte durchgeführt werden:
 
 **Option 1 – im normalen Terminal / CMD (falls Administratorrechte notwendig):**
 
-    cd <Pfad zum Projekt>
-    npm install
-    ng serve --host <Ihre IP> --port 4200 (am besten im privaten Netzwerk)
-
+```bash
+cd <Pfad zum Projekt>
+npm install
+ng serve --host <Ihre IP> --port 4200 # (am besten im privaten Netzwerk)
+```
 
 **Option 2 – direkt im Terminal von Visual Studio Code:**
 
-    cd <Pfad zum Projekt>
-    npm install
-    ng serve --host <Ihre IP> --port 4200 (am besten im privaten Netzwerk)
+```bash
+cd <Pfad zum Projekt>
+npm install
+ng serve --host <Ihre IP> --port 4200 # (am besten im privaten Netzwerk)
+```
 
 
 Spieler 2 startet in Browser mit: `http://<Ihre IP>:4200/` (muss im selben Netzwerk wie der Host sein).
