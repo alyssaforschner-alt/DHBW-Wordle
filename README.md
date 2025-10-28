@@ -15,7 +15,7 @@ Option 1 – über das Terminal in Visual Studio Code:
 Option 2 – direkt über VSC:
 
 - Visual Studio Code öffnen
-- Im Explorer navigieren zu:
+- Im Explorer navigieren zu:<br> 
     Backend → wordle-dev → src → main → java/de/dhbw/stuttgart/wordle
 - Datei: WordleApplication.java
 - Rechtsklick → Run Java
