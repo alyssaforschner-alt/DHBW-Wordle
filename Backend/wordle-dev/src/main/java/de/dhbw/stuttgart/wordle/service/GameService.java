@@ -1,8 +1,8 @@
 package de.dhbw.stuttgart.wordle.service;
 
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+//import org.springframework.http.HttpStatus;
+//import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import de.dhbw.stuttgart.wordle.model.Game;
@@ -10,7 +10,7 @@ import de.dhbw.stuttgart.wordle.model.Status;
 import de.dhbw.stuttgart.wordle.model.User;
 import de.dhbw.stuttgart.wordle.model.Word;
 import de.dhbw.stuttgart.wordle.repository.GameRepository;
-import de.dhbw.stuttgart.wordle.repository.RandomWordRepository;
+//import de.dhbw.stuttgart.wordle.repository.RandomWordRepository;
 import de.dhbw.stuttgart.wordle.repository.UserRepository;
 import de.dhbw.stuttgart.wordle.repository.WordRepository;
 

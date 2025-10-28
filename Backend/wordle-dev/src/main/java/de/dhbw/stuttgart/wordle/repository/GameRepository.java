@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import de.dhbw.stuttgart.wordle.model.Game;
 import de.dhbw.stuttgart.wordle.model.Status;
-import de.dhbw.stuttgart.wordle.model.User;
+//import de.dhbw.stuttgart.wordle.model.User;
 
 public interface GameRepository extends JpaRepository<Game, Long>
 {
